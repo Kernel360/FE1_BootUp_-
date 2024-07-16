@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Kernel360 Web Dev Base</title>
+    </head>
+    <body onload="createDiv()">
+        <section id="container"></section>
+        <div class="setCss">
+            <div class="label">ID</div>
+            <input id="idInput" />
+            <button onclick="idBgChange('bg-red')">Set BG red</button>
+            <button onclick="idBgChange('bg-green')">Set BG green</button>
+            <button onclick="idBgChange('bg-blue')">Set BG blue</button>
+        </d>
+        <div class="setCss">
+            <div class="label">class</div>
+            <input id="classInput" />
+            <button onclick="classChange('text-bold')">Set text bold</button>
+            <button onclick="classChange('text-italic')">Set text italic</button>
+            <button onclick="classChange('text-strike')">Set text strike</button>
+            <button onclick="classChange('text-underline')">Set text underline</button>
+        </div>
+        <div class="setCss">
+            <div class="label">query</div>
+            <input id="queryInput" />
+            <button onclick="queryChange()">reset style</button>
+        </div>
+    </body>
+    
+
+
+    <script>
+        const colors = ["bg-red", "bg-blue", "bg-green"];
+        const texts = ["text-bold", "text-italic", "text-strike", "text-underline"];
+
+        function getRandom(array) {
+            return Math.floor(Math.random() * array.length);
+        }
+
+        function createDiv() {
+            const container = document.getElementById("container");
+            for (let i = 1; i < 17; i++) {
+                const newDiv = document.createElement("div");
+                // const newP = document.createElement("p");
+                const newText = document.createTextNode(i);
+                // newP.className = `${texts[getRandom(texts)]}`;
+                newDiv.className = `${texts[getRandom(texts)]} ${colors[getRandom(colors)]}`;
+                newDiv.id = `id_${i}`;
+                // newP.appendChild(newText);
+                newDiv.appendChild(newText);
+                // newDiv.appendChild(newP);
+                container.appendChild(newDiv);
+            }
+        }
+
+        function idBgChange(color) {
+            const id = document.getElementById("idInput").value;
+            const remove = colors.filter((i) => color !== i);
+
+            const changeBgDiv = document.getElementById(`id_${id}`);
+            for (let i = 0; i < remove.length; i++) {
+                changeBgDiv.classList.remove(remove[i]);
+            }
+            changeBgDiv.classList.add(color);
+        }
+
+        function classChange(changeClass) {
+            const classInput = document.getElementById("classInput").value;
+            const changeClassDiv = [...document.getElementsByClassName(classInput)];
+            // for 문 안에서 className 길이가 변화할 수 있는 코드가 있었고, 해당 코드 때문에 의도한 대로 className을 가지는 태그들을 전부 돌지 못했음
+            // 변화할 수 있는 리스트들은 복사 후 사용하기
+            const length = changeClassDiv.length;
+            for (const item of changeClassDiv) {
+                item.classList.remove(classInput);
+                item.classList.add(changeClass);
+            }
+        }
+
+        function queryChange(changeQuery) {
+            const queryInput = document.getElementById("queryInput").value;
+        
+            const search= document.querySelectorAll(queryInput)
+            search.forEach((item)=> item.className = "")
+
+        }
+        
+    </script>
+</html>

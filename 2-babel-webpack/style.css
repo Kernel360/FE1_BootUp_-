@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+}
+
+div {
+    width: 400px;
+    height: 200px;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+p {
+    width: fit-content;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.text-bold {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.text-italic {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.text-strike {
+    font-size: 30px;
+    text-decoration: line-through;
+}
+
+.text-underline {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.setCss {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    margin: 0;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    margin: 0;
+}
