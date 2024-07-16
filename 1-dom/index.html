@@ -14,7 +14,7 @@
             <button onclick="idBgChange('bg-red')">Set BG red</button>
             <button onclick="idBgChange('bg-green')">Set BG green</button>
             <button onclick="idBgChange('bg-blue')">Set BG blue</button>
-        </d>
+        </div>
         <div class="setCss">
             <div class="label">class</div>
             <input id="classInput" />
@@ -29,8 +29,6 @@
             <button onclick="queryChange()">reset style</button>
         </div>
     </body>
-    
-
 
     <script>
         const colors = ["bg-red", "bg-blue", "bg-green"];
@@ -81,11 +79,9 @@
 
         function queryChange(changeQuery) {
             const queryInput = document.getElementById("queryInput").value;
-        
-            const search= document.querySelectorAll(queryInput)
-            search.forEach((item)=> item.className = "")
 
+            const search = document.querySelectorAll(queryInput);
+            search.forEach((item) => (item.className = ""));
         }
-        
     </script>
 </html>
