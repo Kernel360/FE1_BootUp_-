@@ -98,4 +98,4 @@
 
 -   프로젝트 실행 화면
 
-    ![화면 기록 2024-07-17 오후 3 09 33](https://github.com/user-attachments/assets/79aaa752-d8a4-44fa-a8d1-83d868aa7ec1)
+<img src="https://github.com/user-attachments/assets/899feee7-2c4d-40c8-a9c7-8a7cd5e26774" width="700" height="400"/>
