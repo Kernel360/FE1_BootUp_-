@@ -65,6 +65,12 @@
     - cra로 리액트 세팅했을 때 신경쓰지도 않았던 부분들을 신경써주어야 했음
       => React, ReactDOM을 import해주지를 않아 에러가 났었음
 
+    - ReferenceError: React is not defined
+
+        => [stackoverflow](https://stackoverflow.com/questions/32070303/uncaught-referenceerror-react-is-not-defined)
+
+        => {"runtime": "automatic"} 추가해줌. runtime 옵션은 어떤 것을 런타임 때 사용할 것인지 결정할 수 있고, automatic은 jsx 트랜스파일 해주는 함수를 자동으로 import 해주는 기능임
+
 ## 📝 새롭게 알게된 점
 
 1. for 문 안 조건은 변화하지 않는 변수를 사용해야 함
@@ -87,3 +93,9 @@
 3. 공식문서를 볼 때도 생각하면서 보기
     - 공식문서에 있는 설정 방법으로 로컬에 적용할 때 아무생각 없이 ctrl c + v 하면 안되는 경우도 있음을 기억할 것
     - 어떤 옵션을 어떻게 써야 하는지도 스스로 생각해야 함. 왜 이런 기능이 있는지, 어떤 기능을 위한 옵션인지 설명이 되어 있으므로, 꼼꼼하게 읽어 실수를 줄이도록 노력해야 함
+
+## 실행 사진
+
+-   프로젝트 실행 화면
+
+    ![화면 기록 2024-07-17 오후 3 09 33](https://github.com/user-attachments/assets/79aaa752-d8a4-44fa-a8d1-83d868aa7ec1)
