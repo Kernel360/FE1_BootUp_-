@@ -14,14 +14,10 @@ const App = () => {
         const container = document.getElementById("container");
         for (let i = 1; i < 17; i++) {
             const newDiv = document.createElement("div");
-            // const newP = document.createElement("p");
             const newText = document.createTextNode(i);
-            // newP.className = `${texts[getRandom(texts)]}`;
             newDiv.className = `default ${texts[getRandom(texts)]} ${colors[getRandom(colors)]}`;
             newDiv.id = `id_${i}`;
-            // newP.appendChild(newText);
             newDiv.appendChild(newText);
-            // newDiv.appendChild(newP);
             container.appendChild(newDiv);
         }
     }, []);
